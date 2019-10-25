@@ -22,22 +22,44 @@ Para implementar la tecnica de Deep Learning primero hemos de conocer sus elemen
 #### Neurona
 La neurona artificial (Conocida como *Neurona de McCulloch-Pitts*) es una unidad de calculo que trata de imitar el comportamiento de una neurona natural. basicamente la neurona realiza una operacion de suma ponderada de sus entradas. y luego se aplica una funcion no lineal dando asi un resultado llamado output. (para motivos pedagogicos se puede interpretar una neurona como una funcion de n entradas que las multiplica por *pesos* y luego a su suma aplica una funcion no lineal llamada *funcion de activacion*)
 
-El diseño de una neurona se puede ver
+El diseño de una neurona se puede ver:
+
+
 ![Neurona de McCulloch-Pitts](https://upload.wikimedia.org/wikipedia/commons/c/c8/Mccullochpitts.png)
 
 y la operacion matematica se veria como
 
-*f*(*x*<sub>1</sub>, *x*<sub>2</sub>, …, *x*<sub>*n*</sub>) = *g*(*c*<sub>1</sub>*x*<sub>1</sub> + *c*<sub>2</sub>*x*<sub>2</sub> + … + *c*<sub>*n*</sub>*x*<sub>*n*</sub> − *d*)
+*f*(*x*<sub>1</sub>, *x*<sub>2</sub>, …, *x*<sub>*n*</sub>) = *s*(*c*<sub>1</sub>*x*<sub>1</sub> + *c*<sub>2</sub>*x*<sub>2</sub> + … + *c*<sub>*n*</sub>*x*<sub>*n*</sub> − *d*)
 
 Con:
 * f la *funcion* que representa el output de la neurona
 * \[x_i\] las entradas de la neurona
 * \[c_i\] los pesos de las entradas
-* g la funcion de activacion
+* s la funcion de activacion
 * d el umbral de la operacion
 
 Estas operaciones se pueden representar facilmente con matrizes y asi facilitar la implementacion de estas en programas de computadoras
 
 #### Red Neuronal
-Una red Neuronal son conjuntos de capas (*layers*) de neuronas artificiales conectadas entre si para transmitir señales. la señal de input se transmite sucesivamente aplicando la operacion correspondiente y luego de un numero de ciclos se genera una salida. 
+Una red Neuronal son conjuntos de capas (*layers*) de neuronas artificiales conectadas entre si para transmitir señales. la señal de input se transmite sucesivamente aplicando la operacion correspondiente y luego de un numero de ciclos se genera una salida. Estas señales se modifican a travez de pesos, los cuales son variables y pueden aumentar o disminuir según nescesidad y asi afectar el estado de activacion de las neuronas adyacentes, de igual forma pueden existir funciones que imponen condiciones para que dicha señal pueda transmitirse mas alla. esta funcion se llama funcion de activacion.
+
+La red neuronal y sus pesos no son programados de forma explicita, sino que con el objetivo de reducir su funcion perdida (*Loss function*), varian sus pesos y estructura para asi obtener un resultado optimo. para realizar el cambio de los pesos se usa el metodo de propagacion hacia atras o *backpropagation*
+
+##### Loss Function
+La funcion de perdida, o funcion de costo es una funcion que mapea un evento a un numero real que representa el costo o *perdida* de la operacion anterior, una funcion de perdida comun es la de perdida cuadratica que es basicamente la diferencia entre el valor obtenido menos el esperado al cuadrado. existen muchas funciones de perdida y se ha de ver según el problema cual sera usada para el modelo computacional.
+##### Backpropagation
+la propagacion hacia atras es un algoritmo cuyo objetivo es minimizar la funcion de perdida. esto se hace a travez del gradiente de la funcion de costo respecto a cada peso en la red.     
+
+![Backpropagation](https://www.guru99.com/images/1/030819_0937_BackPropaga1.png)
+
+basicamente el gradiente indica como cambia la funcion costo al modificar un peso especifico. Modificando los pesos y analizando con backpropagation podemos obtener un punto *optimo* de nuestra red neuronal donde la funcion loss es pequeña y asi obteniendo resultados mas exactos al momento de utilizar el modelo construido.
+
+#### Hidden Layers
+las *hidden layers* son las capas de neuronas que no son ni el input ni el output. Estas son las capas donde los pesos son modificados por el algoritmo de backpropagation, se llaman hidden layers debido a que no sabemos como seran las relaciones entre las neuronas ni sus pesos de antemano.
+
+#### Funciones de activacion
+
+
+
+
 
