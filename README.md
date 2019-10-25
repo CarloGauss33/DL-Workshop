@@ -4,31 +4,31 @@
 ### Contenidos :question:
 
 * **Que es el Deep Learning?**
-* * Que es una Neurona?
-* * Que es una Red Neuronal?
-* * Como funciona una Red Neuronal Profunda
+    * Que es una Neurona?
+    * Que es una Red Neuronal?
+    * Como funciona una Red Neuronal Profunda
 
 * **Que es la Vision por Computadora (*aka. CV*)**
-* * Algoritmos usados para CV
-* * Aplicaciones actuales
+    * Algoritmos usados para CV
+    * Aplicaciones actuales
 
 * **Redes Neuronales:**
-* * Redes Neuronales Convulusionales (*aka. CNN*)
-* * * Pooling (*aka. Agrupacion de features*)
-* * Redes Neuronales
-* * * Rectificadores
+    * Redes Neuronales Convulusionales (*aka. CNN*)
+        * Pooling (*aka. Agrupacion de features*)
+    * Redes Neuronales
+        * Rectificadores
 
 * **Implementacion en Python**
 
-* * Introduccion a Google Collab
-* * * Set-up para deep learning
+    * Introduccion a Google Collab
+        * Set-up para deep learning
 
-* * Introduccion a librerias utiles
-* * * OpenCV
-* * * Numpy
-* * * SciPy
-* * * PyTorch
-* * * Scikit learn (*para Machine Learning*)
+    * Introduccion a librerias utiles
+        * OpenCV
+        * Numpy
+        * SciPy
+        * PyTorch
+        * Scikit learn (*para Machine Learning*)
 
 ### Materiales :school_satchel:
 
