@@ -27,7 +27,7 @@ El diseño de una neurona se puede ver
 
 y la operacion matematica se veria como
 
-\[f(x_1, x_2, \dots, x_n ) = g(c_1x_1 + c_2x_2 + \dots + c_nx_n - d)\]
+*f*(*x*<sub>1</sub>, *x*<sub>2</sub>, …, *x*<sub>*n*</sub>) = *g*(*c*<sub>1</sub>*x*<sub>1</sub> + *c*<sub>2</sub>*x*<sub>2</sub> + … + *c*<sub>*n*</sub>*x*<sub>*n*</sub> − *d*)
 
 Con:
 * f la *funcion* que representa el output de la neurona
