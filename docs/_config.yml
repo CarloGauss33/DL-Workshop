@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+name: Deep Learning Workshop
+description: Workshop sobre clasificadores de imagenes usando deep learning
+url: https://carlogauss33.github.io/DL-Workshop/
+markdown: kramdown
