@@ -38,9 +38,9 @@
 
 *Si no haz usado python antes te recomiendo descargarlo y jugar con el, ademas de ver un pequeño tutorial para que te familiarizes con el entorno*
 
-* * [Python](https://www.python.org/) -> ir al apartado Downloads y descargar la version mas reciente
+* [Python](https://www.python.org/) -> ir al apartado Downloads y descargar la version mas reciente
 
-* *[Tutorial](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6) -> tutorial muy completo hecho por microsoft, muy recomendable. Para motivos del workshop basta con verlo hasta la introduccion de funciones.
+* [Tutorial](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6) -> tutorial muy completo hecho por microsoft, muy recomendable. Para motivos del workshop basta con verlo hasta la introduccion de funciones.
 
 ### Material Adicional :books:
 
