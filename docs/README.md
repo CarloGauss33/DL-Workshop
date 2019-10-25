@@ -48,18 +48,32 @@ La red neuronal y sus pesos no son programados de forma explicita, sino que con 
 ##### Loss Function
 La funcion de perdida, o funcion de costo es una funcion que mapea un evento a un numero real que representa el costo o *perdida* de la operacion anterior, una funcion de perdida comun es la de perdida cuadratica que es basicamente la diferencia entre el valor obtenido menos el esperado al cuadrado. existen muchas funciones de perdida y se ha de ver según el problema cual sera usada para el modelo computacional.
 ##### Backpropagation
-la propagacion hacia atras es un algoritmo cuyo objetivo es minimizar la funcion de perdida. esto se hace a travez del gradiente de la funcion de costo respecto a cada peso en la red.     
+Backpropagation (Propagacion inversa) es un algoritmo cuyo objetivo es minimizar la funcion de perdida. esto se hace a travez del gradiente de la funcion de costo respecto a cada peso en la red.     
 
 ![Backpropagation](https://www.guru99.com/images/1/030819_0937_BackPropaga1.png)
 
 basicamente el gradiente indica como cambia la funcion costo al modificar un peso especifico. Modificando los pesos y analizando con backpropagation podemos obtener un punto *optimo* de nuestra red neuronal donde la funcion loss es pequeña y asi obteniendo resultados mas exactos al momento de utilizar el modelo construido.
 
-#### Hidden Layers
-las *hidden layers* son las capas de neuronas que no son ni el input ni el output. Estas son las capas donde los pesos son modificados por el algoritmo de backpropagation, se llaman hidden layers debido a que no sabemos como seran las relaciones entre las neuronas ni sus pesos de antemano.
+##### Hidden Layers
+Las *hidden layers* son las capas de neuronas que no son ni el input ni el output. Estas son las capas donde los pesos son modificados por el algoritmo de backpropagation, se llaman hidden layers debido a que no sabemos como seran las relaciones entre las neuronas ni sus pesos de antemano.
 
-#### Funciones de activacion
-
-
-
+##### Funciones de activacion
+La funcion de activacion de un nodo de una red neuronal define la salida que tendra sobre un set de entradas, existen diversas funciones de activacion, tales como la identidad que deja la salida identica a la entrada, *binary pass* que da un 1 si la entrada es positiva y 0 en otro caso. o una de las mas usadadas ReLU (*Unidad lineal rectificada*) que entrega el maximo entre (0.000...1) y el mismo valor. esta funcion fue y continua siendo usada debido a que esta hecha para solucionar los errores propios de realizar operaciones matematicas complejas en un computador. Debido a sus problemas debidos a su vaga definicion actualmente existen otras funciones tales como la sigmoide que es mas precisa aunque requiere mayor procesamiento computacional.
 
 
+#### Red Neuronal Convolusional (*CNN*)
+
+En este Workshop además de la red neuronal, utilizaremos redes convolusionales. las cuales estan enfocadas en imitar el comportamiento de la vision de un cerebro biologico, su principal uso son para Vision artificial y generacion de imagenes. 
+Las CNN's consisten en multiples capas de filtros convolusionales para asi ir reduciendo el numero de informacion menos util para el modelo. generalmente luego de aplicar el filtro, se aplican funciones para obtener las features de mayor relevancia de los datos.
+Luego de procesar por un numero determinado de capas de filtros y funciones. se reduce la dimensionalidad de los datos y por ende son mas utiles para ser utilizados en una red neuronal tradicional. Para las CNN's se introducen 2 nuevos tipos de Neuronas artificiales enfocadas en reducir la dimensionalidad de las imagenes
+
+##### Neurona Convolucional
+
+En la fase de extracion de features (ie. Una *layer* de la CNN), las neuronas son remplazadas por operadores matriciales que realizan una operacion sobre la imagen. estos operadores contienen operadores convolucionales que tienen el objetivo de *resaltar* las caracterizticas de mayor importancia de la imagen. y asi reducir su dimensionalidad comprimiendo la informacion relevante
+
+##### Neurona de Reduccion de Muestreo
+
+Son neuronas encargadas de reducir el tamaño de la imagen tal que se resuman las caracteristicas de la imagen en una dimensionalidad menos a travez de metodos de pooling (metodos de reduccion de tamaño de muestras), en la siguiente imagen esto se puede ver mas claramente.
+
+
+![Maxpool and Sampling](https://computersciencewiki.org/images/9/9e/MaxpoolSample.png)
