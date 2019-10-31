@@ -165,4 +165,4 @@ Tendra la siguiente estructura:
 
 **Input -> Conv -> ReLU -> MaxPool -> Conv -> ReLU -> MaxPool -> View -> Linear -> ReLU -> Linear -> ReLU -> Linear -> MSELoss -> Loss**
 
-El contenido para crearlo esta explicado y realizado en el archivo *SimpleCNN.ipynb* en la carpeta Programs, [Link]()
+El contenido para crearlo esta explicado y realizado en el archivo *SimpleCNN.ipynb* en la carpeta Programs, [Link](https://github.com/CarloGauss33/DL-Workshop/blob/master/Programs/CourseSimpleCNN.ipynb)
