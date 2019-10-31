@@ -45,3 +45,9 @@
 ### Material Adicional :books:
 
 **Agregar**
+
+
+### Recursos
+
+Data obtenida desde : [http://www.robots.ox.ac.uk/~vgg/data/flowers/102/](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
+Imagenes de la web con licencia CC rescatadas desde WikiMedia
