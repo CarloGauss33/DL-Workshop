@@ -166,3 +166,28 @@ Tendra la siguiente estructura:
 **Input -> Conv -> ReLU -> MaxPool -> Conv -> ReLU -> MaxPool -> View -> Linear -> ReLU -> Linear -> ReLU -> Linear -> MSELoss -> Loss**
 
 El contenido para crearlo esta explicado y realizado en el archivo *SimpleCNN.ipynb* en la carpeta Programs, [Link](https://github.com/CarloGauss33/DL-Workshop/blob/master/Programs/CourseSimpleCNN.ipynb)
+
+
+## Creando un clasificador de imagenes
+
+Y estamos aqui :heart:, ahora aplicaremos todo lo aprendido en como crear un clasificador de imagenes. Para realizar esto utilizaremos un modelo de red neuronal convolucional ya creado, que es el que encontramos en el paper anteriormente mencionado. y luego realizaremos las operaciones nescesarias sobre las imagenes para poder crear nuestro clasificador.
+
+### Google Collab
+
+Google Collab es una plataforma ampliamente utilizada por los Data Scientist, esto porque dan acceso por 12 horas a una GPU (Potente) y cerca de 36 gb de ram, completamente gratis. ademas al ser un entorno en linea, no es nescesario instalar nada en nuestra computadora. Lo que permite no gastar tantos recursos en un servidor dedicado al estar con modelos de practica. Ademas, permite una gran integracion con servicios de cloud tanto de Azure como de AWS (Digital Ocean Agregado recientemente). Permite una eficiente gestion de base de datos remotas y una gran integracion con Gdrive.
+
+Ahora la configuraremmos para utilizarla en nuestro modelo. el cual correremos en la GPU del computador.
+
+* 1. Abre google collab con una cuenta universitaria si es posible (Dan un par mas de beneficios al abrirlo con ciertas universidades)
+
+* 2. Apretar en *Nuevo block de notas de python3* -> hacer click en Entorno de Ejecución -> Acelerador de Hardware = GPU.
+
+Luego de esta preparacion, podemos continuar
+
+### Preparacion de los datos
+
+La base de datos a utilizar esta en la carpeta Data del repositorio de Github
+
+### Crear el Modelo
+
+El tutorial paso a paso y explicado se puede encontrar en el archivo *ImageClassifier.ipynb* en la carpeta programs. [link]()
