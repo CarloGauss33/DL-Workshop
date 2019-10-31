@@ -1,5 +1,8 @@
 PONER INDEX
 
+
+# Teoria
+
 ## Que es la Inteligencia Artificial
 
 Para poder explicar cualquier cosa sobre deep learning y por que es tan importante, se ha de partir sobre la base de que es la Inteligencia arn de diversos algoritmos, se analiza el conjunto de datos. para que al final si se ingresa un dato similar (No igual) a estos, el programa con el aprendizaje previo predice que este dato pertenece a un conjunto que ya conoce.
@@ -112,3 +115,54 @@ Es importante la correcta seleccion de los datos mas representativos de nuestro 
 ![Overfitting Example](https://media.geeksforgeeks.org/wp-content/uploads/20190523171704/overfitting_21.png)
 
 Para solucionar los potenciales errores se realizan ajustes utilizando metodos de regresion, Los metodos mas utiles suelen ser la [Lasso Regression](https://es.wikipedia.org/wiki/LASSO_(estad%C3%ADstica)) ó [Ridge Regression](https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf). Estos no tan solo son utiles para Machine o Deep Learning, sino que constituyen una parte esencial del modelamiento de problemas diaros y analisis estadistico. Por lo que es muy recomendable estudiarlos y aplicarlos. Para ejemplos y implementacion revisar el python notebook [LinearRegression-Lasso-Ridge-Regression](https://github.com/CarloGauss33/DL-Workshop/blob/master/Programs/LinearRegression-Lasso-Ridge-Regression.ipynb)
+
+
+
+# Aplicacion en un clasificador de imagenes
+
+Para este Workshop implementaremos un classificador de imagenes con alta fiabilidad basado en el paper hecho por Gao Huang, Zhuang Liu, Kilian Q. Weinberger y Laurens van der Maaten, cuyo link se encuentra aca [Paper](https://arxiv.org/abs/1608.06993).
+
+¿Por que en este modelo y no en otros?, basicamente porque tiene una arquitecura robusta que da resultados cercanos al 95% de exactitud de prediccion, lo que es excelente para una aplicacion común.
+
+Aunque primero, hemos de conocer como crear esta arquitectura de redes neuronales densas. Al realizar un modelo sobre imagenes, deberia ser claro que uno de nuestros primeros pensamientos ha de ser utilizar redes convolucionales, y eso es lo que haremos. En general una red covolucional tiene una estructura de layers dada como
+
+**Input ->Convolution ->ReLU ->Convolution ->ReLU ->Pooling -> ReLU ->Convolution ->ReLU ->Pooling ->Fully Connected**
+
+Para asi obtener una buena recoleccion de features y con ella.
+
+Para realizar esto hemos de conocer las librerias que utilizaremos y luego aplicarlo creando una red neuronal arbitraria.
+
+## Librerias
+
+### Numpy
+Una de las librerias mas usadas en python, permite la utilizacion de funciones matematicas con una gran optimizacion al ser una libreria basada en **C**, uno de los usos principales para Data Scientist es su gran optimizacion con arrays y operaciones matriciales. [Documentacion](https://docs.scipy.org/doc/numpy/reference/)
+
+### SciPy
+Libreria muy util (y Amplia) para analisis de datos. [Documentacion](http://scipy.github.io/devdocs/index.html)
+
+### OpenCV
+La mas basta libreria para computer vision, posee una gran variedad de filtros y de funciones de analisis para procesar imagenes, ademas posee clasificadores built-in para imagenes. [Documentacion](https://opencv.org/)
+
+### Scikit-Learn
+La mas amplia libreria sobre machine learning y optimizacion tanto en *R* como en *Python*. posee una amplia variedad de modelos *plug and play* principalmente enfocados en clasificadores y optimizadores del area de machine learning [Scikit-learn](https://scikit-learn.org/stable/documentation.html)
+
+### Pandas
+Libreria amplia para la gestion de bases de datos sobre python, muy facil de conectar con SQLite, servicios de Azure. y procesadores de texto built-in para casi todos los formatos de guardado de datos. [Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+
+### Matplotlib
+Libreria para visualizacion de datos muy similar a *R* y a *Matlab* para python. [Documentacion](https://matplotlib.org/3.1.1/contents.html) 
+
+### Tensorflow
+Tensorflow es una libreria hecha por google, la cual se enfoca en la implementacion de algotitmos de aprendizaje automatica y altamente optimizada para operaciones de tensores y la aplicacion en operaciones sobre el TPU. [Documentacion](https://www.tensorflow.org/api_docs)
+
+### Pytorch
+Pytorch es una libreria de Deep Learning lanzada recientemente que soluciona las cosas molestas de las librerias como Tensorflow y Keras. ademas es facil de utilizar y de conectar para procesos sobre la GPU y TPU. [Documentacion](https://pytorch.org/docs/stable/index.html)
+
+## Creando Tu Primera Red Neuronal en python :eyes:
+
+Utilizaremos Pytorch para crear una red neuronal sencilla con un par de layers convolucionales y un par de layers lineales.
+Tendra la siguiente estructura:
+
+**Input -> Conv -> ReLU -> MaxPool -> Conv -> ReLU -> MaxPool -> View -> Linear -> ReLU -> Linear -> ReLU -> Linear -> MSELoss -> Loss**
+
+El contenido para crearlo esta explicado y realizado en el archivo *SimpleCNN.ipynb* en la carpeta Programs, [Link]()
